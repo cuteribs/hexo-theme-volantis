@@ -1,4 +1,4 @@
-############################### Style ###############################
+############################### style ###############################
 style:
   font_smoothing: true # font-smoothing for webkit
   max_width: 1080px # Sum of body width and sidebar width (This limit will be exceeded when the device width is greater than 2000px, reaching 75% of the total width)
@@ -10,11 +10,11 @@ style:
   navbar:
     height: 64px
     width: auto # auto, max
-    effect: [shadow, blur] # [shadow, floatable, blur]
+    effect: [shadow, floatable] # [shadow, floatable, blur]
   sidebar:
-    effect: [shadow] # [shadow, floatable, blur]
+    effect: [shadow, floatable] # [shadow, floatable, blur]
   body:
-    effect: [shadow] # [shadow, floatable, blur]
+    effect: [shadow, floatable] # [shadow, floatable, blur]
     highlight:
       language: true # show language of codeblock
       copy_btn: true
@@ -75,10 +75,10 @@ style:
       # url: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-fonts/Monaco/Monaco.ttf
       # weight: normal
       # style: normal
-  # color:
-  #   site: '#21232F' # Website background color
-  #   site_inner: '#fff' # Text color inside the website background
-  #   site_footer: '#666' # Footer text color inside the website background
+  color:
+    site: '#555555b3' # Website background color
+    site_inner: '#f2f2f2' # Text color inside the website background
+    site_footer: '#f2f2f2' # Footer text color inside the website background
   #   card: '#444' # Card background color
   #   text: '#fff' # The color of the text on the card.
   #   theme: '#ff9800' # Main color
@@ -90,10 +90,7 @@ style:
   #   codeblock: '#555' # Codeblock color
   #   p: '#ccc' # Paragraph color
 
-
-
-
-############################### Layout ###############################
+############################### cover ###############################
 cover:
   scheme: docs # docs, blog
   display:
@@ -101,30 +98,21 @@ cover:
     archive: true
     others: false # can be written in front-matter 'cover: true'
   logo: # https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/logo/256/google_logo.png
-  title: Volantis
-  subtitle: 'A Wonderful Theme for Hexo'
-  search: # search bar placeholder
+  title: 排骨博客
+  subtitle: '爱折腾的排骨'
+  search: 搜索...
   features:
-    - name: 文档
-      icon: fas fa-book
-      url: https://volantis.js.org/getting-started/
-    - name: 博文
-      icon: fas fa-rss
-      url: https://volantis.js.org/archives/
-    - name: 示例
-      icon: fas fa-play-circle
-      url: https://volantis.js.org/examples/
-    - name: 源码
-      icon: fas fa-file-code
-      url: https://github.com/xaoxuu/hexo-theme-volantis/
-      rel: external nofollow noopener noreferrer
-      target: _blank
-    - name: 鸣谢
-      icon: fas fa-handshake
-      url: https://volantis.js.org/contributors/
+  - name: 文章
+    icon: fas fa-book
+    url: /archives/
+  - name: 达人
+    icon: fas fa-user-edit
+    url: /kols/
+  - name: 鸣谢
+    icon: fas fa-handshake
+    url: https://volantis.js.org/contributors/
 
-
-# Navigation Bar
+############################### navbar ###############################
 navbar:
   logo: # choose [img] or [icon + title]
     img:
@@ -150,10 +138,9 @@ navbar:
     - name: 关于
       icon: fas fa-info-circle
       url: about/
-  search: Search...   # Search bar placeholder
+  search: 搜索...   # Search bar placeholder
 
-
-
+############################### layout ###############################
 layout:
   # The following can be written in `blog/source/_data/layout.yml`
   # 文章列表（主页、自定义的列表）布局
@@ -163,7 +150,7 @@ layout:
     # 列表类页面的侧边栏
     sidebar: [blogger, category, tagcloud, qrcode]
     # read more button
-    readmore: Read More <i class="fas fa-chevron-right"></i>
+    readmore: 阅读全文... <i class="fas fa-chevron-right"></i>
   # 页面布局
   on_page:
     # 文章页面主体元素，你也可以在页面的Front-matter中设置
@@ -175,23 +162,22 @@ layout:
       header: [title, author, category, date, top]
       footer: [updated, tags, btns, share]
     # 文章页面的侧边栏
-    sidebar: [qrcode, toc]
+    sidebar: [qrcode, toc, category, tagcloud]
   # 文章布局，参数继承自 on_page
   on_post:
     # 文章页脚，自动在每一篇文章末尾添加
     article_footer: [references, related_repos, copyright, donate]
   # 其他的页面布局暂时等于 on_list
 
-
-# meta library
+############################### meta ###############################
 meta:
   # 文章标题
   title: # 暂无配置
   # 默认文章作者（可在front-matter中覆盖）
   author:
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
-    name: Mr. X
-    url: https://xaoxuu.com
+    avartar: https://cdn.jsdelivr.net/gh/cuteribs/cdn-assets/domo_kun2.jpg
+    name: 可爱的排骨
+    url: https://cuteribs.ga/
   # 文章创建日期
   date:
     icon: fas fa-calendar-alt
@@ -261,7 +247,7 @@ meta:
       title: 反馈
       color: '#1BCDFC'
 
-# widget library
+############################### widget ###############################
 widget:
   # The following can be written in `blog/source/_data/widget.yml`
   # ---------------------------------------
@@ -269,11 +255,11 @@ widget:
   blogger:
     class: blogger
     display: [desktop, mobile] # [desktop, mobile]
-    avatar: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-assets/avatar/avatar.png
+    avatar: https://cdn.jsdelivr.net/gh/cuteribs/cdn-assets/domo_kun2.jpg
     shape: rectangle # circle, rectangle
     url: /about/
-    title:
-    subtitle:
+    title: 可爱的排骨
+    subtitle: 排骨爱折腾
     jinrishici: true # Poetry Today. You can set a string, and it will be displayed when loading fails.
     social: true
   # ---------------------------------------
@@ -327,8 +313,8 @@ widget:
     blockquote: true
     permalink: '本文永久链接是：'
     content:
-      - '博客内容遵循 署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议'
-      - permalink
+    - '未经许可, 本站内容不可转载'
+    - permalink
   # ---------------------------------------
   # qrcode widget
   donate:
@@ -357,8 +343,7 @@ widget:
   # You can add your own widget here or 'blog/source/_data/widget.yml'
   # class: text, list, grid, qrcode, page, ... see more at https://volantis.js.org/
 
-
-
+############################### footer ###############################
 footer:
   # layout of footer: [aplayer, social, license, info, copyright]
   layout: [aplayer, social, license, info, copyright]
@@ -371,12 +356,11 @@ footer:
       url: https://github.com/xaoxuu
     - icon: fas fa-headphones-alt
       url: https://music.163.com/#/user/home?id=63035382
-  copyright: '[Copyright © 2017-2020 Mr. X](https://xaoxuu.com)'
+  copyright: '[版权所有 © 2020 可爱的排骨](https://cuteribs.ga)'
   # You can add your own property here. (Support markdown, for example: br: '<br>')
   br: '<br>'
 
-
-############################### SEO ###############################
+############################### seo ###############################
 seo:
   # When there are no keywords in the article's front-matter, use tags as keywords.
   use_tags_as_keywords: true
@@ -390,8 +374,7 @@ seo:
     tag: noindex,follow
     # robots can be written in front-matter
 
-
-############################### Plugins ###############################
+############################### plugins ###############################
 plugins:
   ######## Plugins to improve loading speed:
   # Preload (The menu's url must end with ‘/’)
@@ -417,13 +400,6 @@ plugins:
 
   # mathjax
   mathjax: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
-  ######## Plugins for SEO:
-  # Traffic statistics (very slow loading)
-  busuanzi: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-busuanzi@2.3/js/busuanzi.pure.mini.js
-
-  # npm i --save hexo-wordcount
-  wordcount: #true
 
   ######## Plugins for ...
   # Button Ripple Effect
@@ -477,10 +453,7 @@ plugins:
     list_max_height: 340px # list max height
     list_folded: true
 
-
-
-
-############################### Comments ###############################
+############################### comments ###############################
 comments:
   title: <i class='fas fa-comments'></i> 评论
   subtitle:
@@ -488,16 +461,16 @@ comments:
   # Valine
   # https://valine.js.org/
   valine:
-    appId: dogUA2FSKGTo029M1SEwGROT-MdYXbMMI # your appId
-    appKey: u0NdtQ8nvHoMdJPSYqm1LRxE # your appKey
+    appId: pvKmMOLxDFw0YR0y7pVFTo0o-MdYXbMMI # your appId
+    appKey: s40zxIg9wGykkJJiUMy2IHA6 # your appKey
     js: https://cdn.jsdelivr.net/npm/valine@1.4/dist/Valine.min.js
     path: # All pages use the same path (share the same comments data)
     meta: nick,mail,link # valine comment header info
     requiredFields: ['nick','mail']
     enableQQ: true # Unstable avatar link
     placeholder: 快来评论吧~ # valine comment input placeholder(like: Please leave your footprints )
-    avatar: robohash # gravatar style https://valine.js.org/avatar
-    pageSize: 10 # comment list page size
+    avatar: mp # gravatar style https://valine.js.org/avatar
+    pageSize: 20 # comment list page size
     lang: zh-cn
     highlight: true
     visitor: true
@@ -550,10 +523,7 @@ comments:
   livere:
     uid:
 
-
-
-
-############################### Search ###############################
+############################### search ###############################
 # To use hexo search, you need to install the following plugins:
 # npm i -S hexo-generator-search hexo-generator-json-content
 search:
@@ -574,13 +544,11 @@ search:
   baidu:
     apiId:
 
-
-
-############################### Theme Information ###############################
+############################### info ###############################
 info:
-  name: Volantis # This is theme's name.
-  version: '2.6.6' # This is theme's version.
-  docs: https://volantis.js.org/ # This is theme's URL.
+  name: 排骨博客 # This is theme's name.
+  version: '0.1' # This is theme's version.
+  docs: https://github.com/cuteribs/hexo-theme-volantis # This is theme's URL.
   cdn:
     js: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/app.js
     css:
