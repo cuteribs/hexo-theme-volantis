@@ -447,7 +447,7 @@ plugins:
     fixed: false      # enable fixed mode
     theme: '#1BCDFC'  # main color
     autoplay: false   # audio autoplay
-    order: list       # player play order, values: 'list', 'random'
+    order: random       # player play order, values: 'list', 'random'
     loop: all         # player loop play, values: 'all', 'one', 'none'
     volume: 0.7       # default volume, notice that player will remember user setting, default volume will not work after user set volume themselves
     list_max_height: 340px # list max height
@@ -546,9 +546,9 @@ search:
 
 ############################### info ###############################
 info:
-  name: 排骨博客 # This is theme's name.
-  version: '0.1' # This is theme's version.
-  docs: https://github.com/cuteribs/hexo-theme-volantis # This is theme's URL.
+  name: Volantis # This is theme's name.
+  version: '2.6.6' # This is theme's version.
+  docs: https://volantis.js.org/ # This is theme's URL.
   cdn:
     js: https://cdn.jsdelivr.net/gh/xaoxuu/cdn-volantis@2.6.5/js/app.js
     css:
