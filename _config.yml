@@ -10,11 +10,11 @@ style:
   navbar:
     height: 64px
     width: auto # auto, max
-    effect: [shadow, floatable] # [shadow, floatable, blur]
+    effect: [shadow, blur] # [shadow, floatable, blur]
   sidebar:
-    effect: [shadow, floatable] # [shadow, floatable, blur]
+    effect: [shadow, blur] # [shadow, floatable, blur]
   body:
-    effect: [shadow, floatable] # [shadow, floatable, blur]
+    effect: [shadow, blur] # [shadow, floatable, blur]
     highlight:
       language: true # show language of codeblock
       copy_btn: true
@@ -116,8 +116,8 @@ cover:
 navbar:
   logo: # choose [img] or [icon + title]
     img:
-    icon:
-    title:
+    icon: fas fa-blog
+    title: 排骨博客
   menu:
     # The following can be written in `blog/source/_data/menu.yml`
     - name: 博客
@@ -271,8 +271,8 @@ widget:
       icon: fas fa-list
       title: 本文目录
     list_number: false
-    min_depth: 2
-    max_depth: 5
+    min_depth: 1
+    max_depth: 2
   # ---------------------------------------
   # category widget
   category:
