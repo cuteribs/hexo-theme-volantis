@@ -148,7 +148,7 @@ layout:
     # 列表中每一篇文章的meta信息
     meta: [title, author, category, date, wordcount, top]
     # 列表类页面的侧边栏
-    sidebar: [blogger, category, tagcloud, qrcode]
+    sidebar: [blogger, category, tagcloud]
     # read more button
     readmore: 阅读全文... <i class="fas fa-chevron-right"></i>
   # 页面布局
@@ -160,9 +160,9 @@ layout:
     # 如果tags放置在meta.header中，那么在post列表中不显示（因为卡片下方已经有了）
     meta:
       header: [title, author, category, date, top]
-      footer: [updated, tags, btns, share]
+      footer: [updated, tags, btns]
     # 文章页面的侧边栏
-    sidebar: [qrcode, toc, category, tagcloud]
+    sidebar: [toc, category, tagcloud]
   # 文章布局，参数继承自 on_page
   on_post:
     # 文章页脚，自动在每一篇文章末尾添加
@@ -319,7 +319,7 @@ widget:
   # qrcode widget
   donate:
     class: qrcode
-    display: [desktop, mobile] # [desktop, mobile]
+    display: [] # [desktop, mobile]
     height: 64px  # Automatic height if not set
     fancybox: true
     images:
